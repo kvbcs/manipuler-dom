@@ -1,0 +1,36 @@
+#snackbar {
+    visibility: hidden;
+    width: 250px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 16px;
+    border-radius: 10px;
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    margin-left: -125px;
+    bottom: 30px;
+    font-size: 17px;
+   }
+   #snackbar.show {
+    visibility: visible;
+    animation: appear 0.5s, disappear 0.5s 2.5s;
+   }
+   @keyframes appear {
+    from {
+    bottom: 0; opacity: 0;
+    }
+    to {
+    bottom: 30px; opacity: 1;
+    }
+   }
+   @keyframes disappear {
+    from {
+    bottom: 30px; opacity: 1;
+    }
+    to {
+    bottom: 0; opacity: 0;
+    }
+   }
+   
